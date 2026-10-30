@@ -1,0 +1,208 @@
+/* MEVY LUXURY HAMPERS - WEBSITE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #faf7f2;
+    color: #49372f;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px 6%;
+    background: #fffdf9;
+}
+
+.logo {
+    font-size: 19px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #49372f;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a,
+.language a {
+    color: #49372f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover,
+.language a:hover {
+    color: #ad8b65;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #f0e7dc;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    font-weight: normal;
+}
+
+.subtitle {
+    color: #ad8b65;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.about-story,
+.about-vision,
+.about-values,
+.about-closing {
+    max-width: 1050px;
+    margin: 70px auto;
+    padding: 20px 30px;
+}
+
+.about-story h2,
+.about-vision h2,
+.about-values h2,
+.about-closing h2 {
+    color: #49372f;
+    font-size: 28px;
+}
+
+.about-story p,
+.about-vision p,
+.value-item p,
+.about-closing p {
+    color: #74665d;
+    line-height: 1.9;
+}
+
+.value-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e7ddd1;
+}
+
+.about-closing {
+    text-align: center;
+    background: #f0e7dc;
+    padding: 55px 25px;
+}
+
+.about-closing a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 28px;
+    background: #49372f;
+    color: white;
+    text-decoration: none;
+}
+
+/* FOUNDER PROFILE */
+
+.founder-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    max-width: 1150px;
+    margin: 80px auto;
+    padding: 40px 25px;
+}
+
+.founder-image {
+    flex: 1;
+}
+
+.founder-image img {
+    width: 100%;
+    max-width: 440px;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.founder-content {
+    flex: 1;
+}
+
+.founder-label {
+    color: #ad8b65;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.founder-content h2 {
+    color: #49372f;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.founder-content p {
+    color: #74665d;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #49372f;
+    color: #fffdf9;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .about-hero h1 {
+        font-size: 30px;
+    }
+
+    .founder-section {
+        flex-direction: column;
+        gap: 30px;
+        margin: 45px auto;
+        padding: 20px;
+    }
+
+    .founder-image img {
+        max-width: 100%;
+        height: auto;
+        max-height: 520px;
+    }
+
+    .founder-content h2 {
+        font-size: 24px;
+    }
+
+    .about-story,
+    .about-vision,
+    .about-values,
+    .about-closing {
+        margin: 40px auto;
+        padding: 20px;
+    }
+}
