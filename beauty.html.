@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty & Self-Care | Mevy Luxury Hampers</title>
+
+    <meta name="description" content="Temukan koleksi kecantikan, skincare, self-care dan hadiah mewah pilihan dari Mevy Luxury Hampers.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MEVY LUXURY HAMPERS</div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="hampers.html">Hampers</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+
+        <div class="language">
+            <a href="beauty.html">ID</a> |
+            <a href="en/beauty.html">EN</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about-hero">
+            <p class="subtitle">BEAUTY • WELLNESS • SELF-CARE</p>
+
+            <h1>Keindahan dalam Setiap Detail</h1>
+
+            <p>
+                Temukan pilihan kecantikan dan perawatan diri
+                yang dikurasi untuk menghadirkan pengalaman
+                istimewa bagi diri sendiri maupun orang terkasih.
+            </p>
+        </section>
+
+        <section class="about-story">
+
+            <h2>Beauty & Self-Care Collection</h2>
+
+            <p>
+                Mevy menghadirkan pilihan produk kecantikan,
+                skincare, dan self-care dengan perhatian
+                terhadap kualitas, keindahan, dan presentasi.
+            </p>
+
+            <p>
+                Setiap koleksi dirancang untuk menjadi hadiah
+                yang penuh perhatian, elegan, dan berkesan.
+            </p>
+
+        </section>
+
+        <section class="about-values">
+
+            <h2>Jelajahi Koleksi Kami</h2>
+
+            <div class="value-item">
+                <h3>Luxury Skincare</h3>
+                <p>
+                    Pilihan perawatan kulit premium untuk
+                    rutinitas kecantikan yang istimewa.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <h3>Beauty Hampers</h3>
+                <p>
+                    Rangkaian produk kecantikan dalam
+                    kemasan hadiah yang elegan.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <h3>Self-Care Collections</h3>
+                <p>
+                    Pilihan produk relaksasi dan perawatan
+                    diri untuk momen penuh ketenangan.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <h3>Personalized Beauty Gifts</h3>
+                <p>
+                    Hadiah kecantikan yang dapat disesuaikan
+                    untuk berbagai kesempatan istimewa.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="about-closing">
+
+            <h2>Hadiah yang Memanjakan dan Berkesan</h2>
+
+            <p>
+                Biarkan kami membantu Anda menemukan
+                pilihan kecantikan dan self-care
+                yang sempurna untuk setiap momen.
+            </p>
+
+            <a href="contact.html">
+                Hubungi Kami
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Mevy Luxury Hampers.
+            Hak cipta dilindungi.
+        </p>
+    </footer>
+
+</body>
+</html>
