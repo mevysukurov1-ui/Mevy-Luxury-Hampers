@@ -1,187 +1,227 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
-  <meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
+<meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
 
-  <style>
-    body {
-      margin: 0;
-      background: #fbf5ed;
-      color: #402719;
-      font-family: Georgia, serif;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    a { color: inherit; text-decoration: none; }
+body {
+  margin: 0;
+  background: #fbf5ed;
+  color: #402719;
+  font-family: Georgia, serif;
+}
 
-    .announcement {
-      background: #402719;
-      color: #f7dfb4;
-      text-align: center;
-      padding: 11px;
-      font-size: 13px;
-    }
+a { color: inherit; text-decoration: none; }
 
-    .main-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding: 20px 5%;
-      background: #fff9f1;
-    }
+.announcement {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+}
 
-    .brand {
-      font-size: 34px;
-      letter-spacing: 4px;
-      font-weight: bold;
-    }
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 5%;
+  background: #fff9f1;
+}
 
-    .brand small {
-      display: block;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-align: center;
-    }
+.brand {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      font-size: 15px;
-    }
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-align: center;
+}
 
-    .language a {
-      padding: 8px 12px;
-      border: 1px solid #b98239;
-      border-radius: 20px;
-    }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 15px;
+}
 
-    .hero {
-      min-height: 430px;
-      display: flex;
-      align-items: center;
-      padding: 55px 6%;
-      background:
-        linear-gradient(90deg, rgba(250,235,220,.97), rgba(250,235,220,.78) 43%, rgba(250,235,220,.05)),
-        url("images/hero-hamper.jpg") center/cover no-repeat;
-    }
+.language a {
+  padding: 8px 12px;
+  border: 1px solid #b98239;
+  border-radius: 20px;
+}
 
-    .hero-content { max-width: 540px; }
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 6%;
+  overflow: hidden;
+  background: #ead8c5;
+}
 
-    .eyebrow {
-      color: #a66d2c;
-      letter-spacing: 3px;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.04;
-      margin: 18px 0;
-      font-weight: normal;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250,235,220,.97) 0%,
+    rgba(250,235,220,.82) 43%,
+    rgba(250,235,220,.12) 100%
+  );
+}
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 14px 27px;
-      background: #a96f28;
-      color: white;
-      border-radius: 30px;
-      font-family: Arial, sans-serif;
-    }
+.eyebrow {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
 
-    .welcome {
-      text-align: center;
-      padding: 48px 8%;
-    }
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 18px 0;
+  font-weight: normal;
+}
 
-    .welcome h2, .collections h2 {
-      font-size: 34px;
-      font-weight: normal;
-    }
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
 
-    .welcome p {
-      max-width: 760px;
-      margin: 12px auto;
-      line-height: 1.8;
-    }
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 27px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
 
-    .collections {
-      padding: 20px 5% 55px;
-      text-align: center;
-    }
+.welcome {
+  text-align: center;
+  padding: 48px 8%;
+}
 
-    .collection-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 28px;
-    }
+.welcome h2, .collections h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
 
-    .collection-card {
-      background: #f1dfd1;
-      border: 1px solid #e3cbb6;
-      border-radius: 12px;
-      padding: 35px 22px;
-      min-height: 145px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.welcome p {
+  max-width: 760px;
+  margin: 12px auto;
+  line-height: 1.8;
+}
 
-    .collection-card h3 {
-      font-size: 25px;
-      font-weight: normal;
-      margin: 10px 0;
-    }
+.collections {
+  padding: 20px 5% 55px;
+  text-align: center;
+}
 
-    .collection-card p { line-height: 1.6; }
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
 
-    .collection-card a {
-      color: #925b20;
-      text-decoration: underline;
-    }
+.collection-card {
+  background: #f1dfd1;
+  border: 1px solid #e3cbb6;
+  border-radius: 12px;
+  padding: 35px 22px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .contact-banner {
-      text-align: center;
-      padding: 42px 6%;
-      background: #ead0c2;
-    }
+.collection-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0;
+}
 
-    .contact-banner h2 {
-      font-size: 30px;
-      font-weight: normal;
-    }
+.collection-card p { line-height: 1.6; }
 
-    footer {
-      background: #402719;
-      color: #f7dfb4;
-      text-align: center;
-      padding: 28px 15px;
-      line-height: 1.8;
-    }
+.collection-card a {
+  color: #925b20;
+  text-decoration: underline;
+}
 
-    @media (max-width: 750px) {
-      .main-nav { justify-content: center; text-align: center; }
-      .nav-links { justify-content: center; gap: 14px; }
-      .hero { min-height: 400px; padding: 40px 7%; }
-      .hero h1 { font-size: 43px; }
-      .collection-grid { grid-template-columns: 1fr; }
-      .welcome h2, .collections h2 { font-size: 28px; }
-    }
-  </style>
+.contact-banner {
+  text-align: center;
+  padding: 42px 6%;
+  background: #ead0c2;
+}
+
+.contact-banner h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+footer {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 28px 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+  .main-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 { font-size: 43px; }
+
+  .collection-grid { grid-template-columns: 1fr; }
+
+  .welcome h2, .collections h2 { font-size: 28px; }
+}
+</style>
 </head>
 
 <body>
@@ -212,8 +252,13 @@
 </header>
 
 <main>
-
   <section class="hero">
+    <img
+      class="hero-image"
+      src="images/hero-hamper.jpg"
+      alt="Mevy Luxury Hampers"
+    >
+
     <div class="hero-content">
       <div class="eyebrow">Seni Memberi dengan Penuh Makna</div>
       <h1>Hadiah Indah.<br>Momen Bermakna.</h1>
@@ -246,7 +291,6 @@
     <h2>Jelajahi Koleksi Kami</h2>
 
     <div class="collection-grid">
-
       <div class="collection-card">
         <div class="eyebrow">01 · Gifting</div>
         <h3>Luxury Hampers</h3>
@@ -267,7 +311,6 @@
         <p>Hadiah profesional dan souvenir personal untuk bisnis serta acara spesial.</p>
         <a href="corporate.html">Jelajahi Corporate →</a>
       </div>
-
     </div>
   </section>
 
@@ -276,7 +319,1326 @@
     <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
     <a href="contact.html" class="button">Hubungi Kami →</a>
   </section>
+</main>
 
+<footer>
+  <h3>MEVY LUXURY HAMPERS</h3>
+  <p>Thoughtfully Curated. Beautifully Presented.</p>
+  <p>© 2026 Mevy Luxury Hampers. Hak Cipta Dilindungi.</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
+<meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fbf5ed;
+  color: #402719;
+  font-family: Georgia, serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.announcement {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 5%;
+  background: #fff9f1;
+}
+
+.brand {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.language a {
+  padding: 8px 12px;
+  border: 1px solid #b98239;
+  border-radius: 20px;
+}
+
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 6%;
+  overflow: hidden;
+  background: #ead8c5;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250,235,220,.97) 0%,
+    rgba(250,235,220,.82) 43%,
+    rgba(250,235,220,.12) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.eyebrow {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 18px 0;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 27px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome {
+  text-align: center;
+  padding: 48px 8%;
+}
+
+.welcome h2, .collections h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
+
+.welcome p {
+  max-width: 760px;
+  margin: 12px auto;
+  line-height: 1.8;
+}
+
+.collections {
+  padding: 20px 5% 55px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.collection-card {
+  background: #f1dfd1;
+  border: 1px solid #e3cbb6;
+  border-radius: 12px;
+  padding: 35px 22px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collection-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.collection-card p { line-height: 1.6; }
+
+.collection-card a {
+  color: #925b20;
+  text-decoration: underline;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 42px 6%;
+  background: #ead0c2;
+}
+
+.contact-banner h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+footer {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 28px 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+  .main-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 { font-size: 43px; }
+
+  .collection-grid { grid-template-columns: 1fr; }
+
+  .welcome h2, .collections h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  ✦ Hadiah elegan untuk setiap momen istimewa · Pengiriman ke seluruh Indonesia
+</div>
+
+<header class="main-nav">
+  <a href="index.html" class="brand">
+    MEVY
+    <small>LUXURY HAMPERS</small>
+  </a>
+
+  <nav class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="about.html">Tentang Kami</a>
+    <a href="hampers.html">Hampers</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="corporate.html">Corporate</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+
+  <div class="language">
+    <strong>ID</strong> |
+    <a href="en/index.html">EN</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img
+      class="hero-image"
+      src="images/hero-hamper.jpg"
+      alt="Mevy Luxury Hampers"
+    >
+
+    <div class="hero-content">
+      <div class="eyebrow">Seni Memberi dengan Penuh Makna</div>
+      <h1>Hadiah Indah.<br>Momen Bermakna.</h1>
+      <p>
+        Temukan koleksi hampers mewah, produk kecantikan,
+        dan hadiah personal yang dirancang dengan penuh
+        perhatian untuk setiap momen istimewa.
+      </p>
+      <a href="hampers.html" class="button">Jelajahi Koleksi Kami →</a>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="eyebrow">Selamat Datang di Mevy</div>
+    <h2>Kehangatan dalam Setiap Hadiah</h2>
+    <p>
+      Di Mevy Luxury Hampers, kami percaya bahwa hadiah lebih
+      dari sekadar sesuatu yang indah. Hadiah adalah cara
+      menyampaikan kasih sayang, perhatian dan penghargaan.
+    </p>
+    <p>
+      Setiap koleksi dirancang dengan sentuhan elegan,
+      presentasi istimewa dan perhatian pada setiap detail.
+    </p>
+    <a href="about.html" class="button">Kenali Mevy</a>
+  </section>
+
+  <section class="collections">
+    <div class="eyebrow">Pilihan Istimewa</div>
+    <h2>Jelajahi Koleksi Kami</h2>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <div class="eyebrow">01 · Gifting</div>
+        <h3>Luxury Hampers</h3>
+        <p>Hampers elegan untuk ulang tahun, perayaan dan setiap kesempatan istimewa.</p>
+        <a href="hampers.html">Jelajahi Hampers →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">02 · Beauty</div>
+        <h3>Beauty & Self-Care</h3>
+        <p>Pilihan produk kecantikan dan perawatan diri untuk memanjakan orang tersayang.</p>
+        <a href="beauty.html">Jelajahi Beauty →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">03 · Business</div>
+        <h3>Corporate Gifting</h3>
+        <p>Hadiah profesional dan souvenir personal untuk bisnis serta acara spesial.</p>
+        <a href="corporate.html">Jelajahi Corporate →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <h2>Mari Ciptakan Momen Istimewa Bersama Mevy</h2>
+    <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
+    <a href="contact.html" class="button">Hubungi Kami →</a>
+  </section>
+</main>
+
+<footer>
+  <h3>MEVY LUXURY HAMPERS</h3>
+  <p>Thoughtfully Curated. Beautifully Presented.</p>
+  <p>© 2026 Mevy Luxury Hampers. Hak Cipta Dilindungi.</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
+<meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fbf5ed;
+  color: #402719;
+  font-family: Georgia, serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.announcement {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 5%;
+  background: #fff9f1;
+}
+
+.brand {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.language a {
+  padding: 8px 12px;
+  border: 1px solid #b98239;
+  border-radius: 20px;
+}
+
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 6%;
+  overflow: hidden;
+  background: #ead8c5;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250,235,220,.97) 0%,
+    rgba(250,235,220,.82) 43%,
+    rgba(250,235,220,.12) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.eyebrow {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 18px 0;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 27px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome {
+  text-align: center;
+  padding: 48px 8%;
+}
+
+.welcome h2, .collections h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
+
+.welcome p {
+  max-width: 760px;
+  margin: 12px auto;
+  line-height: 1.8;
+}
+
+.collections {
+  padding: 20px 5% 55px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.collection-card {
+  background: #f1dfd1;
+  border: 1px solid #e3cbb6;
+  border-radius: 12px;
+  padding: 35px 22px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collection-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.collection-card p { line-height: 1.6; }
+
+.collection-card a {
+  color: #925b20;
+  text-decoration: underline;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 42px 6%;
+  background: #ead0c2;
+}
+
+.contact-banner h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+footer {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 28px 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+  .main-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 { font-size: 43px; }
+
+  .collection-grid { grid-template-columns: 1fr; }
+
+  .welcome h2, .collections h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  ✦ Hadiah elegan untuk setiap momen istimewa · Pengiriman ke seluruh Indonesia
+</div>
+
+<header class="main-nav">
+  <a href="index.html" class="brand">
+    MEVY
+    <small>LUXURY HAMPERS</small>
+  </a>
+
+  <nav class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="about.html">Tentang Kami</a>
+    <a href="hampers.html">Hampers</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="corporate.html">Corporate</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+
+  <div class="language">
+    <strong>ID</strong> |
+    <a href="en/index.html">EN</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img
+      class="hero-image"
+      src="images/hero-hamper.jpg"
+      alt="Mevy Luxury Hampers"
+    >
+
+    <div class="hero-content">
+      <div class="eyebrow">Seni Memberi dengan Penuh Makna</div>
+      <h1>Hadiah Indah.<br>Momen Bermakna.</h1>
+      <p>
+        Temukan koleksi hampers mewah, produk kecantikan,
+        dan hadiah personal yang dirancang dengan penuh
+        perhatian untuk setiap momen istimewa.
+      </p>
+      <a href="hampers.html" class="button">Jelajahi Koleksi Kami →</a>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="eyebrow">Selamat Datang di Mevy</div>
+    <h2>Kehangatan dalam Setiap Hadiah</h2>
+    <p>
+      Di Mevy Luxury Hampers, kami percaya bahwa hadiah lebih
+      dari sekadar sesuatu yang indah. Hadiah adalah cara
+      menyampaikan kasih sayang, perhatian dan penghargaan.
+    </p>
+    <p>
+      Setiap koleksi dirancang dengan sentuhan elegan,
+      presentasi istimewa dan perhatian pada setiap detail.
+    </p>
+    <a href="about.html" class="button">Kenali Mevy</a>
+  </section>
+
+  <section class="collections">
+    <div class="eyebrow">Pilihan Istimewa</div>
+    <h2>Jelajahi Koleksi Kami</h2>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <div class="eyebrow">01 · Gifting</div>
+        <h3>Luxury Hampers</h3>
+        <p>Hampers elegan untuk ulang tahun, perayaan dan setiap kesempatan istimewa.</p>
+        <a href="hampers.html">Jelajahi Hampers →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">02 · Beauty</div>
+        <h3>Beauty & Self-Care</h3>
+        <p>Pilihan produk kecantikan dan perawatan diri untuk memanjakan orang tersayang.</p>
+        <a href="beauty.html">Jelajahi Beauty →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">03 · Business</div>
+        <h3>Corporate Gifting</h3>
+        <p>Hadiah profesional dan souvenir personal untuk bisnis serta acara spesial.</p>
+        <a href="corporate.html">Jelajahi Corporate →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <h2>Mari Ciptakan Momen Istimewa Bersama Mevy</h2>
+    <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
+    <a href="contact.html" class="button">Hubungi Kami →</a>
+  </section>
+</main>
+
+<footer>
+  <h3>MEVY LUXURY HAMPERS</h3>
+  <p>Thoughtfully Curated. Beautifully Presented.</p>
+  <p>© 2026 Mevy Luxury Hampers. Hak Cipta Dilindungi.</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
+<meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fbf5ed;
+  color: #402719;
+  font-family: Georgia, serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.announcement {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 5%;
+  background: #fff9f1;
+}
+
+.brand {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.language a {
+  padding: 8px 12px;
+  border: 1px solid #b98239;
+  border-radius: 20px;
+}
+
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 6%;
+  overflow: hidden;
+  background: #ead8c5;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250,235,220,.97) 0%,
+    rgba(250,235,220,.82) 43%,
+    rgba(250,235,220,.12) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.eyebrow {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 18px 0;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 27px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome {
+  text-align: center;
+  padding: 48px 8%;
+}
+
+.welcome h2, .collections h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
+
+.welcome p {
+  max-width: 760px;
+  margin: 12px auto;
+  line-height: 1.8;
+}
+
+.collections {
+  padding: 20px 5% 55px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.collection-card {
+  background: #f1dfd1;
+  border: 1px solid #e3cbb6;
+  border-radius: 12px;
+  padding: 35px 22px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collection-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.collection-card p { line-height: 1.6; }
+
+.collection-card a {
+  color: #925b20;
+  text-decoration: underline;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 42px 6%;
+  background: #ead0c2;
+}
+
+.contact-banner h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+footer {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 28px 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+  .main-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 { font-size: 43px; }
+
+  .collection-grid { grid-template-columns: 1fr; }
+
+  .welcome h2, .collections h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  ✦ Hadiah elegan untuk setiap momen istimewa · Pengiriman ke seluruh Indonesia
+</div>
+
+<header class="main-nav">
+  <a href="index.html" class="brand">
+    MEVY
+    <small>LUXURY HAMPERS</small>
+  </a>
+
+  <nav class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="about.html">Tentang Kami</a>
+    <a href="hampers.html">Hampers</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="corporate.html">Corporate</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+
+  <div class="language">
+    <strong>ID</strong> |
+    <a href="en/index.html">EN</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img
+      class="hero-image"
+      src="images/hero-hamper.jpg"
+      alt="Mevy Luxury Hampers"
+    >
+
+    <div class="hero-content">
+      <div class="eyebrow">Seni Memberi dengan Penuh Makna</div>
+      <h1>Hadiah Indah.<br>Momen Bermakna.</h1>
+      <p>
+        Temukan koleksi hampers mewah, produk kecantikan,
+        dan hadiah personal yang dirancang dengan penuh
+        perhatian untuk setiap momen istimewa.
+      </p>
+      <a href="hampers.html" class="button">Jelajahi Koleksi Kami →</a>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="eyebrow">Selamat Datang di Mevy</div>
+    <h2>Kehangatan dalam Setiap Hadiah</h2>
+    <p>
+      Di Mevy Luxury Hampers, kami percaya bahwa hadiah lebih
+      dari sekadar sesuatu yang indah. Hadiah adalah cara
+      menyampaikan kasih sayang, perhatian dan penghargaan.
+    </p>
+    <p>
+      Setiap koleksi dirancang dengan sentuhan elegan,
+      presentasi istimewa dan perhatian pada setiap detail.
+    </p>
+    <a href="about.html" class="button">Kenali Mevy</a>
+  </section>
+
+  <section class="collections">
+    <div class="eyebrow">Pilihan Istimewa</div>
+    <h2>Jelajahi Koleksi Kami</h2>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <div class="eyebrow">01 · Gifting</div>
+        <h3>Luxury Hampers</h3>
+        <p>Hampers elegan untuk ulang tahun, perayaan dan setiap kesempatan istimewa.</p>
+        <a href="hampers.html">Jelajahi Hampers →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">02 · Beauty</div>
+        <h3>Beauty & Self-Care</h3>
+        <p>Pilihan produk kecantikan dan perawatan diri untuk memanjakan orang tersayang.</p>
+        <a href="beauty.html">Jelajahi Beauty →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">03 · Business</div>
+        <h3>Corporate Gifting</h3>
+        <p>Hadiah profesional dan souvenir personal untuk bisnis serta acara spesial.</p>
+        <a href="corporate.html">Jelajahi Corporate →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <h2>Mari Ciptakan Momen Istimewa Bersama Mevy</h2>
+    <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
+    <a href="contact.html" class="button">Hubungi Kami →</a>
+  </section>
+</main>
+
+<footer>
+  <h3>MEVY LUXURY HAMPERS</h3>
+  <p>Thoughtfully Curated. Beautifully Presented.</p>
+  <p>© 2026 Mevy Luxury Hampers. Hak Cipta Dilindungi.</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mevy Luxury Hampers | Hadiah Indah, Momen Bermakna</title>
+<meta name="description" content="Temukan hampers mewah, hadiah kecantikan dan koleksi hadiah personal dari Mevy Luxury Hampers.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fbf5ed;
+  color: #402719;
+  font-family: Georgia, serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.announcement {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 11px;
+  font-size: 13px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 5%;
+  background: #fff9f1;
+}
+
+.brand {
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.language a {
+  padding: 8px 12px;
+  border: 1px solid #b98239;
+  border-radius: 20px;
+}
+
+.hero {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 6%;
+  overflow: hidden;
+  background: #ead8c5;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(250,235,220,.97) 0%,
+    rgba(250,235,220,.82) 43%,
+    rgba(250,235,220,.12) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+}
+
+.eyebrow {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.04;
+  margin: 18px 0;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 27px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.welcome {
+  text-align: center;
+  padding: 48px 8%;
+}
+
+.welcome h2, .collections h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
+
+.welcome p {
+  max-width: 760px;
+  margin: 12px auto;
+  line-height: 1.8;
+}
+
+.collections {
+  padding: 20px 5% 55px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.collection-card {
+  background: #f1dfd1;
+  border: 1px solid #e3cbb6;
+  border-radius: 12px;
+  padding: 35px 22px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collection-card h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.collection-card p { line-height: 1.6; }
+
+.collection-card a {
+  color: #925b20;
+  text-decoration: underline;
+}
+
+.contact-banner {
+  text-align: center;
+  padding: 42px 6%;
+  background: #ead0c2;
+}
+
+.contact-banner h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+footer {
+  background: #402719;
+  color: #f7dfb4;
+  text-align: center;
+  padding: 28px 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 750px) {
+  .main-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 40px 7%;
+  }
+
+  .hero h1 { font-size: 43px; }
+
+  .collection-grid { grid-template-columns: 1fr; }
+
+  .welcome h2, .collections h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  ✦ Hadiah elegan untuk setiap momen istimewa · Pengiriman ke seluruh Indonesia
+</div>
+
+<header class="main-nav">
+  <a href="index.html" class="brand">
+    MEVY
+    <small>LUXURY HAMPERS</small>
+  </a>
+
+  <nav class="nav-links">
+    <a href="index.html">Beranda</a>
+    <a href="about.html">Tentang Kami</a>
+    <a href="hampers.html">Hampers</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="corporate.html">Corporate</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+
+  <div class="language">
+    <strong>ID</strong> |
+    <a href="en/index.html">EN</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img
+      class="hero-image"
+      src="images/hero-hamper.jpg"
+      alt="Mevy Luxury Hampers"
+    >
+
+    <div class="hero-content">
+      <div class="eyebrow">Seni Memberi dengan Penuh Makna</div>
+      <h1>Hadiah Indah.<br>Momen Bermakna.</h1>
+      <p>
+        Temukan koleksi hampers mewah, produk kecantikan,
+        dan hadiah personal yang dirancang dengan penuh
+        perhatian untuk setiap momen istimewa.
+      </p>
+      <a href="hampers.html" class="button">Jelajahi Koleksi Kami →</a>
+    </div>
+  </section>
+
+  <section class="welcome">
+    <div class="eyebrow">Selamat Datang di Mevy</div>
+    <h2>Kehangatan dalam Setiap Hadiah</h2>
+    <p>
+      Di Mevy Luxury Hampers, kami percaya bahwa hadiah lebih
+      dari sekadar sesuatu yang indah. Hadiah adalah cara
+      menyampaikan kasih sayang, perhatian dan penghargaan.
+    </p>
+    <p>
+      Setiap koleksi dirancang dengan sentuhan elegan,
+      presentasi istimewa dan perhatian pada setiap detail.
+    </p>
+    <a href="about.html" class="button">Kenali Mevy</a>
+  </section>
+
+  <section class="collections">
+    <div class="eyebrow">Pilihan Istimewa</div>
+    <h2>Jelajahi Koleksi Kami</h2>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <div class="eyebrow">01 · Gifting</div>
+        <h3>Luxury Hampers</h3>
+        <p>Hampers elegan untuk ulang tahun, perayaan dan setiap kesempatan istimewa.</p>
+        <a href="hampers.html">Jelajahi Hampers →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">02 · Beauty</div>
+        <h3>Beauty & Self-Care</h3>
+        <p>Pilihan produk kecantikan dan perawatan diri untuk memanjakan orang tersayang.</p>
+        <a href="beauty.html">Jelajahi Beauty →</a>
+      </div>
+
+      <div class="collection-card">
+        <div class="eyebrow">03 · Business</div>
+        <h3>Corporate Gifting</h3>
+        <p>Hadiah profesional dan souvenir personal untuk bisnis serta acara spesial.</p>
+        <a href="corporate.html">Jelajahi Corporate →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <h2>Mari Ciptakan Momen Istimewa Bersama Mevy</h2>
+    <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
+    <a href="contact.html" class="button">Hubungi Kami →</a>
+  </section>
 </main>
 
 <footer>
