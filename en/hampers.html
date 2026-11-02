@@ -1,162 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Luxury Gift Hampers | Mevy Luxury Hampers</title>
+<title>Luxury Hampers | Mevy Luxury Hampers</title>
+<meta name="description" content="Explore the beautiful luxury hamper and gift collections by Mevy Luxury Hampers.">
 
-    <meta name="description" content="Explore exclusive luxury hampers and personalized gift collections by Mevy Luxury Hampers.">
+<link rel="stylesheet" href="../style.css">
 
-    <link rel="stylesheet" href="../style.css">
+<style>
+.gallery-section {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 55px 5%;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.gallery-heading .subtitle {
+  color: #a66d2c;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.gallery-heading h2 {
+  color: #402719;
+  font-size: 34px;
+  font-weight: normal;
+  margin: 12px 0;
+}
+
+.gallery-heading p {
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  background: #fffaf4;
+  border: 1px solid #e7d5c5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(64,39,25,.06);
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.gallery-card h3 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 14px 10px;
+  margin: 0;
+  color: #402719;
+}
+
+.gallery-card p {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 0 15px 15px;
+  margin: 0;
+}
+
+.page-intro {
+  text-align: center;
+  padding: 55px 8%;
+  background: #fbf5ed;
+}
+
+.page-intro h1 {
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: normal;
+  color: #402719;
+}
+
+.page-intro p {
+  max-width: 750px;
+  line-height: 1.8;
+  margin: 15px auto;
+}
+
+.gallery-contact {
+  text-align: center;
+  padding: 45px 6%;
+  background: #ead0c2;
+}
+
+.gallery-contact a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 25px;
+  background: #a96f28;
+  color: white;
+  border-radius: 30px;
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card img {
+    height: 280px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 28px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">MEVY LUXURY HAMPERS</div>
+<header>
+  <div class="logo">MEVY LUXURY HAMPERS</div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="hampers.html">Hampers</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="corporate.html">Corporate</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hampers.html">Hampers</a>
+    <a href="beauty.html">Beauty</a>
+    <a href="corporate.html">Corporate</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-        <div class="language">
-            <a href="../hampers.html">ID</a> |
-            <a href="hampers.html">EN</a>
-        </div>
-    </header>
+  <div class="language">
+    <a href="../hampers.html">ID</a> |
+    <strong>EN</strong>
+  </div>
+</header>
 
-    <main>
+<main>
 
-        <section class="about-hero">
-            <p class="subtitle">THOUGHTFUL GIFTING • BEAUTIFUL MOMENTS</p>
+<section class="page-intro">
+  <p class="subtitle">THOUGHTFUL GIFTING · BEAUTIFUL MOMENTS</p>
 
-            <h1>Luxury Hampers for Every Occasion</h1>
+  <h1>Luxury Hampers for Every Occasion</h1>
 
-            <p>
-                Discover beautifully curated gift collections
-                designed to celebrate life's most meaningful moments.
-            </p>
-        </section>
+  <p>
+    Discover beautifully curated gift collections
+    designed to celebrate life's most meaningful moments.
+    Every Mevy gift is thoughtfully selected and
+    beautifully presented.
+  </p>
+</section>
 
-        <section class="about-story">
+<section class="gallery-section">
 
-            <h2>The Art of Thoughtful Gifting</h2>
+  <div class="gallery-heading">
+    <p class="subtitle">DISCOVER MEVY</p>
+    <h2>Our Gift Collection</h2>
+    <p>
+      Explore our collection of luxury hampers, beauty gifts,
+      personalized items and corporate gifting inspirations.
+    </p>
+  </div>
 
-            <p>
-                At Mevy, we believe every gift should tell
-                a story. Our hampers bring together carefully
-                selected products, elegant packaging
-                and thoughtful presentation.
-            </p>
+  <div class="gallery-grid">
 
-            <p>
-                Whether celebrating a birthday, expressing
-                appreciation or marking a special milestone,
-                we create gifting experiences that feel
-                personal and memorable.
-            </p>
+    <div class="gallery-card">
+      <img src="../images/beauty-hamper.jpg" alt="Beauty Hamper" loading="lazy">
+      <h3>Beauty Hamper</h3>
+      <p>A beautiful collection for someone special.</p>
+    </div>
 
-        </section>
+    <div class="gallery-card">
+      <img src="../images/chocolate-hamper.jpg" alt="Chocolate Hamper" loading="lazy">
+      <h3>Chocolate Hamper</h3>
+      <p>A delightful gift for chocolate lovers.</p>
+    </div>
 
-        <section class="about-values">
+    <div class="gallery-card">
+      <img src="../images/luxury-gift-display.jpg" alt="Luxury Gift Display" loading="lazy">
+      <h3>Luxury Gift Display</h3>
+      <p>Elegant presentation for memorable occasions.</p>
+    </div>
 
-            <h2>Explore Our Gift Collections</h2>
+    <div class="gallery-card">
+      <img src="../images/personalized-handbag.jpg" alt="Personalized Handbag" loading="lazy">
+      <h3>Personalized Handbag</h3>
+      <p>A thoughtful personal gifting idea.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Birthday Hampers</h3>
-                <p>
-                    Beautiful gifts to make birthdays
-                    even more memorable.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/personalized-notebooks.jpg" alt="Personalized Notebooks" loading="lazy">
+      <h3>Personalized Notebooks</h3>
+      <p>Personalized stationery for everyday inspiration.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Anniversary Hampers</h3>
-                <p>
-                    Thoughtful collections for celebrating
-                    love and meaningful relationships.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/mevy-lifestyle.jpg" alt="Mevy Lifestyle" loading="lazy">
+      <h3>Mevy Lifestyle</h3>
+      <p>Discover the Mevy gifting lifestyle.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Wedding & Engagement Gifts</h3>
-                <p>
-                    Elegant gift collections for weddings,
-                    engagements and romantic celebrations.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/premium-gift-display.jpg" alt="Premium Gift Display" loading="lazy">
+      <h3>Premium Gift Display</h3>
+      <p>Premium gifts presented with elegance.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Baby Celebration Hampers</h3>
-                <p>
-                    Special gifts to welcome new arrivals
-                    and celebrate growing families.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/gift-promotion.jpg" alt="Gift Promotion" loading="lazy">
+      <h3>Gift Promotion</h3>
+      <p>Explore our special gifting inspirations.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Beauty & Self-Care Hampers</h3>
-                <p>
-                    Beautifully curated skincare,
-                    beauty and wellness gift collections.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/branded-notebooks.jpg" alt="Branded Notebooks" loading="lazy">
+      <h3>Branded Notebooks</h3>
+      <p>Professional personalized stationery.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Corporate Hampers</h3>
-                <p>
-                    Premium gifting for companies,
-                    employees, clients and business partners.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/branded-tumblers.jpg" alt="Branded Tumblers" loading="lazy">
+      <h3>Branded Tumblers</h3>
+      <p>Useful and stylish personalized gifts.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Festive & Seasonal Hampers</h3>
-                <p>
-                    Thoughtful collections for Ramadan,
-                    Eid, Christmas, New Year and other occasions.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/branded-gift-set.jpg" alt="Branded Gift Set" loading="lazy">
+      <h3>Branded Gift Set</h3>
+      <p>A coordinated gift for clients and teams.</p>
+    </div>
 
-            <div class="value-item">
-                <h3>Personalized Gift Boxes</h3>
-                <p>
-                    Custom gift boxes created around
-                    your preferences and special occasions.
-                </p>
-            </div>
+    <div class="gallery-card">
+      <img src="../images/premium-hamper.jpg" alt="Premium Hamper" loading="lazy">
+      <h3>Premium Hamper</h3>
+      <p>A refined gift for special celebrations.</p>
+    </div>
 
-        </section>
+    <div class="gallery-card">
+      <img src="../images/barbie-tumblers.jpg" alt="Barbie Tumblers" loading="lazy">
+      <h3>Barbie Tumblers</h3>
+      <p>Fun and colorful personalized drinkware.</p>
+    </div>
 
-        <section class="about-closing">
+    <div class="gallery-card">
+      <img src="../images/skincare-collection.jpg" alt="Skincare Collection" loading="lazy">
+      <h3>Skincare Collection</h3>
+      <p>A lovely collection for beauty enthusiasts.</p>
+    </div>
 
-            <h2>Make Every Occasion Special</h2>
+    <div class="gallery-card">
+      <img src="../images/beauty-gift-box.jpg" alt="Beauty Gift Box" loading="lazy">
+      <h3>Beauty Gift Box</h3>
+      <p>Thoughtful beauty gifts in an elegant box.</p>
+    </div>
 
-            <p>
-                Let us help you create a thoughtful
-                and beautifully presented gift.
-            </p>
+    <div class="gallery-card">
+      <img src="../images/mevy-promotion.jpg" alt="Mevy Promotion" loading="lazy">
+      <h3>Mevy Promotion</h3>
+      <p>Discover more from Mevy Luxury Hampers.</p>
+    </div>
 
-            <a href="contact.html">
-                Enquire About Our Hampers
-            </a>
+    <div class="gallery-card">
+      <img src="../images/basket-hamper-display.jpg" alt="Basket Hamper Display" loading="lazy">
+      <h3>Basket Hamper Display</h3>
+      <p>Beautifully arranged basket gifting.</p>
+    </div>
 
-        </section>
+    <div class="gallery-card">
+      <img src="../images/corporate-gift-display.jpg" alt="Corporate Gift Display" loading="lazy">
+      <h3>Corporate Gift Display</h3>
+      <p>Elegant gifts for business relationships.</p>
+    </div>
 
-    </main>
+    <div class="gallery-card">
+      <img src="../images/wine-gourmet-hamper.jpg" alt="Wine Gourmet Hamper" loading="lazy">
+      <h3>Wine Gourmet Hamper</h3>
+      <p>A gourmet-inspired hamper for special occasions.</p>
+    </div>
 
-    <footer>
-        <p>
-            &copy; 2026 Mevy Luxury Hampers.
-            All rights reserved.
-        </p>
-    </footer>
+  </div>
+</section>
+
+<section class="gallery-contact">
+  <h2>Make Every Occasion Special</h2>
+  <p>Let us help you create a thoughtful and beautifully presented gift.</p>
+  <a href="contact.html">Enquire About Our Hampers →</a>
+</section>
+
+</main>
+
+<footer>
+  <p>MEVY LUXURY HAMPERS</p>
+  <p>Thoughtfully Curated. Beautifully Presented.</p>
+  <p>&copy; 2026 Mevy Luxury Hampers. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
