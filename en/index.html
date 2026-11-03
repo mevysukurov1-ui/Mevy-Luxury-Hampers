@@ -270,6 +270,74 @@ footer {
   .collection-card { min-height: 280px; }
 }
 
+
+/* Product photo preview directly below the homepage collection cards */
+.product-preview {
+  padding: 48px 5% 58px;
+  text-align: center;
+  background: #fffaf4;
+}
+.product-preview h2 {
+  margin: 12px 0;
+  font-size: 32px;
+  font-weight: normal;
+}
+.preview-intro {
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  color: #765f50;
+}
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.preview-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: 265px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ead8c5;
+  box-shadow: 0 5px 18px rgba(64,39,25,.10);
+}
+.preview-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.preview-card:hover img { transform: scale(1.05); }
+.preview-card::after {
+  content: "";
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(transparent, rgba(35,24,19,.78));
+}
+.preview-card span {
+  position: absolute;
+  z-index: 1;
+  left: 12px;
+  right: 12px;
+  bottom: 20px;
+  color: #fffdf9;
+  font-size: 19px;
+  text-shadow: 0 1px 5px rgba(0,0,0,.35);
+}
+@media (max-width: 850px) {
+  .preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .product-preview { padding: 38px 5% 45px; }
+  .product-preview h2 { font-size: 26px; }
+  .preview-card { height: 210px; }
+  .preview-card span { font-size: 16px; }
+}
+
 </style>
 </head>
 
@@ -360,6 +428,30 @@ footer {
         <p>Thoughtful professional gifts and personalized souvenirs for businesses and events.</p>
         <a href="corporate.html">Explore Corporate →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="product-preview">
+    <div class="eyebrow">A Closer Look</div>
+    <h2>Discover More from Mevy</h2>
+    <p class="preview-intro">Explore our selection of thoughtful gifts and special products.</p>
+    <div class="preview-grid">
+      <a class="preview-card" href="hampers.html">
+        <img src="../images/Tumbler1.jpg" alt="Mevy tumbler collection">
+        <span>Tumblers</span>
+      </a>
+      <a class="preview-card" href="hampers.html">
+        <img src="../images/premium-hamper.jpg" alt="Mevy luxury hampers">
+        <span>Luxury Hampers</span>
+      </a>
+      <a class="preview-card" href="beauty.html">
+        <img src="../images/Beauty1.jpg" alt="Mevy beauty products">
+        <span>Beauty &amp; Self-Care</span>
+      </a>
+      <a class="preview-card" href="corporate.html">
+        <img src="../images/Corporate1.jpg" alt="Mevy corporate gifts">
+        <span>Corporate Gifts</span>
+      </a>
     </div>
   </section>
 
