@@ -13,7 +13,7 @@
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
 .gallery-card{background:#fffdf9;padding:10px;border:1px solid #e7ddd1}
 .gallery-card img{width:100%;height:240px;object-fit:cover;display:block}
-.gallery-card h3{text-align:center;color:#49372f;font-size:15px;font-weight:normal;margin:12px 0 5px}
+.gallery-card h3{text-align:center;color:#49372f;font-size:15px;font-weight:normal;margin:12px 0 5px}.gallery-price{text-align:center;color:#9a713d;font-weight:700;font-size:14px;margin:4px 0 8px}
 @media(max-width:500px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-card img{height:170px}}
 </style>
 </head>
@@ -65,7 +65,7 @@
 
 <section class="product-gallery">
 <h2>Mevy Product Collection</h2>
-<p class="collection-intro">Explore our original gift displays alongside our latest collections of beauty, chocolate, corporate gifts, wine, tumblers and food.</p>
+<p class="collection-intro">Explore our original gift displays alongside our latest collections of beauty, chocolate, corporate gifts, wine, tumblers and food. Prices shown are indicative ranges and may vary with product contents, brands, personalisation and packaging.</p>
 
 <h2>Our Original Collection</h2>
 <div class="gallery-grid" id="original-gallery"></div>
@@ -125,8 +125,12 @@ img.alt=label;
 img.loading="lazy";
 const caption=document.createElement("h3");
 caption.textContent=label;
+const price=document.createElement("p");
+price.className="gallery-price";
+price.textContent=({original:"Rp15,000–Rp35,000",beauty:"Rp249,000–Rp499,000",chocolate:"Rp199,000–Rp399,000",corporate:"Rp250,000–Rp650,000",wine:"Rp449,000–Rp999,000+",tumbler:"Rp89,000–Rp179,000",food:"Rp249,000–Rp499,000"}[galleryId.replace("-gallery","")]);
 card.appendChild(img);
 card.appendChild(caption);
+card.appendChild(price);
 gallery.appendChild(card);
 });
 });
