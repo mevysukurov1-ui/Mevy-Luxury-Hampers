@@ -338,6 +338,46 @@ footer {
   .preview-card span { font-size: 16px; }
 }
 
+
+/* Balanced luxury homepage additions */
+.section-heading{text-align:center;max-width:760px;margin:0 auto 30px;padding:0 15px}
+.section-heading h2{font-size:clamp(27px,3vw,36px);font-weight:normal;margin:10px 0}
+.section-heading p{color:#765f50;line-height:1.8;margin:0}
+.featured-section,.seasonal-section,.journal-section{padding:58px 5%;background:#fbf5ed}
+.featured-panel{display:grid;grid-template-columns:1.12fr .88fr;max-width:1180px;min-height:390px;margin:auto;background:#fffaf4;border:1px solid #eadbca;box-shadow:0 10px 30px rgba(64,39,25,.07);overflow:hidden}
+.featured-image-wrap{min-height:390px;background:#ead8c5}
+.featured-image-wrap img{width:100%;height:100%;min-height:390px;display:block;object-fit:cover;transition:opacity .35s ease}
+.featured-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(25px,5vw,58px)}
+.featured-copy h3{font-size:clamp(27px,3vw,38px);font-weight:normal;line-height:1.25;margin:14px 0}
+.featured-copy p{line-height:1.85;color:#765f50}
+.featured-copy .button{margin-top:10px}
+.featured-controls{display:flex;align-items:center;gap:10px;margin-top:28px}
+.featured-controls button{border:1px solid #c9a77e;background:transparent;color:#65452d;border-radius:24px;padding:9px 16px;cursor:pointer;font:inherit}
+.featured-controls button:hover{background:#efe1d1}
+.seasonal-section{background:#fffaf4}
+.seasonal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1180px;margin:auto}
+.seasonal-card{height:260px;position:relative;overflow:hidden;border-radius:10px;background:#ead8c5}
+.seasonal-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease}
+.seasonal-card:hover img{transform:scale(1.045)}
+.seasonal-card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(35,24,19,.72))}
+.seasonal-card span{position:absolute;z-index:1;left:20px;bottom:18px;color:white;font-size:21px}
+.journal-section{background:#f5ede4}
+.journal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1180px;margin:auto}
+.journal-card{background:#fffaf4;border:1px solid #eadbca}
+.journal-card img{width:100%;height:225px;display:block;object-fit:cover}
+.journal-copy{padding:22px}
+.journal-copy h3{font-size:22px;font-weight:normal;line-height:1.35;margin:0 0 10px}
+.journal-copy p{color:#765f50;line-height:1.75;font-size:15px}
+.journal-link{display:inline-block;color:#925b20;text-decoration:underline;text-underline-offset:4px;margin-top:5px}
+.moving-gallery{overflow:hidden;padding:18px 0;background:#fffaf4}
+.moving-track{display:flex;width:max-content;gap:14px;animation:mevy-gallery-scroll 42s linear infinite}
+.moving-track img{width:190px;height:145px;object-fit:cover;border-radius:8px;display:block}
+.moving-gallery:hover .moving-track,.moving-gallery:focus-within .moving-track{animation-play-state:paused}
+@keyframes mevy-gallery-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:800px){.featured-panel{grid-template-columns:1fr}.featured-image-wrap,.featured-image-wrap img{min-height:300px;height:300px}.featured-copy{padding:30px}.seasonal-grid,.journal-grid{grid-template-columns:1fr 1fr}.seasonal-card{height:220px}}
+@media(max-width:520px){.featured-section,.seasonal-section,.journal-section{padding:42px 5%}.seasonal-grid,.journal-grid{grid-template-columns:1fr}.seasonal-card{height:240px}.journal-card img{height:210px}.moving-track img{width:155px;height:120px}}
+@media(prefers-reduced-motion:reduce){.moving-track{animation:none}.seasonal-card img{transition:none}}
+
 </style>
 </head>
 
@@ -503,6 +543,71 @@ footer {
     </div>
   </section>
 
+
+  <section class="featured-section" aria-label="Pilihan Unggulan Mevy">
+    <div class="section-heading">
+      <div class="eyebrow">Pilihan Kurasi</div>
+      <h2>Pilihan Unggulan Mevy</h2>
+      <p>Temukan inspirasi hadiah istimewa yang kami pilih untuk Anda.</p>
+    </div>
+    <div class="featured-panel">
+      <div class="featured-image-wrap"><img id="featured-image" src="images/premium-hamper.jpg" alt="Seni Memberi dengan Elegan"></div>
+      <div class="featured-copy">
+        <div class="eyebrow" id="featured-count">01 / 04</div>
+        <h3 id="featured-heading">Seni Memberi dengan Elegan</h3>
+        <p id="featured-description">Hampers istimewa yang dikurasi dengan perhatian pada setiap detail.</p>
+        <a id="featured-link" class="button" href="hampers.html">Jelajahi Hampers →</a>
+        <div class="featured-controls">
+          <button type="button" id="featured-prev" aria-label="Sebelumnya">←</button>
+          <button type="button" id="featured-pause" aria-label="Jeda rotasi">Jeda</button>
+          <button type="button" id="featured-next" aria-label="Berikutnya">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seasonal-section">
+    <div class="section-heading">
+      <div class="eyebrow">Untuk Setiap Perayaan</div>
+      <h2>Momen Istimewa, Pilihan Istimewa</h2><p>Inspirasi untuk merayakan, berbagi dan menyampaikan perhatian.</p>
+    </div>
+    <div class="seasonal-grid">
+      <a class="seasonal-card" href="hampers.html"><img src="images/mevy-promotion.jpg" alt="Kartu ucapan Idulfitri Mevy"><span>Ucapan Idulfitri</span></a>
+      <a class="seasonal-card" href="hampers.html"><img src="images/gift-promotion.jpg" alt="Kartu ucapan Natal Mevy"><span>Ucapan Natal</span></a>
+      <a class="seasonal-card" href="hampers.html"><img src="images/Food1.jpg" alt="Pilihan hadiah gourmet"><span>Hadiah Gourmet</span></a>
+    </div>
+  </section>
+  <section class="journal-section">
+    <div class="section-heading">
+      <div class="eyebrow">Inspirasi dari Mevy</div>
+      <h2>Cerita & Inspirasi Mevy</h2><p>Gagasan sederhana untuk menjadikan setiap hadiah lebih bermakna.</p>
+    </div>
+    <div class="journal-grid">
+      <article class="journal-card"><a href="hampers.html"><img src="images/Beauty2.jpg" alt="Cara Memilih Hadiah yang Berkesan"></a><div class="journal-copy"><h3>Cara Memilih Hadiah yang Berkesan</h3><p>Pilih hadiah dengan mempertimbangkan cerita, kebutuhan dan momen penerimanya.</p><a class="journal-link" href="hampers.html">Jelajahi koleksi →</a></div></article>
+      <article class="journal-card"><a href="hampers.html"><img src="images/Chocolate2.jpg" alt="Detail Kecil, Makna yang Besar"></a><div class="journal-copy"><h3>Detail Kecil, Makna yang Besar</h3><p>Sentuhan personal dan presentasi yang indah dapat membuat hadiah terasa lebih istimewa.</p><a class="journal-link" href="hampers.html">Jelajahi koleksi →</a></div></article>
+      <article class="journal-card"><a href="corporate.html"><img src="images/Corporate2.jpg" alt="Membangun Hubungan melalui Apresiasi"></a><div class="journal-copy"><h3>Membangun Hubungan melalui Apresiasi</h3><p>Hadiah corporate adalah cara elegan untuk menyampaikan terima kasih dan menjaga hubungan baik.</p><a class="journal-link" href="corporate.html">Jelajahi koleksi →</a></div></article>
+    </div>
+  </section>
+  <section class="moving-gallery" aria-label="Pilihan produk Mevy">
+    <div class="moving-track">
+      <img src="images/Tumbler2.jpg" alt="Pilihan produk Mevy 1">
+      <img src="images/Chocolate1.jpg" alt="Pilihan produk Mevy 2">
+      <img src="images/Beauty3.jpg" alt="Pilihan produk Mevy 3">
+      <img src="images/Corporate3.jpg" alt="Pilihan produk Mevy 4">
+      <img src="images/Wine2.jpg" alt="Pilihan produk Mevy 5">
+      <img src="images/premium-hamper.jpg" alt="Pilihan produk Mevy 6">
+      <img src="images/Food1.jpg" alt="Pilihan produk Mevy 7">
+      <img src="images/Tumbler5.jpg" alt="Pilihan produk Mevy 8">
+      <img src="images/Tumbler2.jpg" alt="" aria-hidden="true">
+      <img src="images/Chocolate1.jpg" alt="" aria-hidden="true">
+      <img src="images/Beauty3.jpg" alt="" aria-hidden="true">
+      <img src="images/Corporate3.jpg" alt="" aria-hidden="true">
+      <img src="images/Wine2.jpg" alt="" aria-hidden="true">
+      <img src="images/premium-hamper.jpg" alt="" aria-hidden="true">
+      <img src="images/Food1.jpg" alt="" aria-hidden="true">
+      <img src="images/Tumbler5.jpg" alt="" aria-hidden="true">
+    </div>
+  </section>
+
   <section class="contact-banner">
     <h2>Mari Ciptakan Momen Istimewa Bersama Mevy</h2>
     <p>Kami siap membantu Anda menemukan hadiah yang tepat dan berkesan.</p>
@@ -515,6 +620,47 @@ footer {
   <p>Thoughtfully Curated. Beautifully Presented.</p>
   <p>© 2026 Mevy Luxury Hampers. Hak Cipta Dilindungi.</p>
 </footer>
+
+
+<script>
+(function(){
+  const slides=[["premium-hamper.jpg","Seni Memberi dengan Elegan","Hampers istimewa yang dikurasi dengan perhatian pada setiap detail.","Jelajahi Hampers","hampers.html"],["Beauty1.jpg","Sentuhan Perawatan yang Berarti","Pilihan beauty dan self-care untuk menghadirkan momen memanjakan.","Jelajahi Beauty","beauty.html"],["Corporate1.jpg","Apresiasi dalam Setiap Detail","Hadiah corporate yang dirancang untuk meninggalkan kesan profesional.","Jelajahi Corporate","corporate.html"],["Tumbler2.jpg","Hadiah Personal, Lebih Berkesan","Temukan pilihan tumbler dan hadiah personal untuk momen spesial.","Lihat Koleksi","hampers.html"]];
+  const image=document.getElementById("featured-image");
+  if(!image)return;
+  const heading=document.getElementById("featured-heading");
+  const description=document.getElementById("featured-description");
+  const link=document.getElementById("featured-link");
+  const count=document.getElementById("featured-count");
+  const pause=document.getElementById("featured-pause");
+  let current=0;
+  let timer=null;
+  let paused=false;
+  function show(index){
+    current=(index+slides.length)%slides.length;
+    const s=slides[current];
+    image.style.opacity="0";
+    window.setTimeout(function(){
+      image.src="images/"+s[0];
+      image.alt=s[1];
+      heading.textContent=s[1];
+      description.textContent=s[2];
+      link.textContent=s[3]+" →";
+      link.href=s[4];
+      count.textContent=String(current+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
+      image.style.opacity="1";
+    },180);
+  }
+  function start(){if(timer)window.clearInterval(timer);if(!paused)timer=window.setInterval(function(){show(current+1)},7000)}
+  document.getElementById("featured-prev").addEventListener("click",function(){show(current-1);start()});
+  document.getElementById("featured-next").addEventListener("click",function(){show(current+1);start()});
+  pause.addEventListener("click",function(){
+    paused=!paused;
+    pause.textContent=paused?"Lanjutkan":"Jeda";
+    if(paused){if(timer)window.clearInterval(timer);timer=null}else start();
+  });
+  start();
+})();
+</script>
 
 </body>
 </html>
