@@ -1,7 +1,17 @@
-/* MEVY LUXURY HAMPERS - WEBSITE STYLING */
+/* =====================================================
+   MEVY LUXURY HAMPERS
+   Complete Website Stylesheet
+   Luxury Cream, Chocolate & Champagne Gold Theme
+===================================================== */
+
+/* 1. GLOBAL STYLES */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +21,16 @@ body {
     font-family: Georgia, serif;
     line-height: 1.7;
 }
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* 2. HEADER AND NAVIGATION */
 
 header {
     display: flex;
@@ -47,6 +67,9 @@ nav a:hover,
     color: #ad8b65;
 }
 
+/* 3. GENERAL HERO SECTION
+   Used by About and other existing pages */
+
 .about-hero {
     text-align: center;
     padding: 100px 20px;
@@ -63,6 +86,8 @@ nav a:hover,
     letter-spacing: 4px;
     font-size: 12px;
 }
+
+/* 4. ABOUT PAGE CONTENT */
 
 .about-story,
 .about-vision,
@@ -109,7 +134,11 @@ nav a:hover,
     text-decoration: none;
 }
 
-/* FOUNDER PROFILE */
+.about-closing a:hover {
+    background: #ad8b65;
+}
+
+/* 5. FOUNDER PROFILE */
 
 .founder-section {
     display: flex;
@@ -158,6 +187,188 @@ nav a:hover,
     line-height: 1.9;
 }
 
+/* 6. HAMPERS HERO WITH FULL-WIDTH PHOTO */
+
+.hampers-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 25px;
+    overflow: hidden;
+    background: #49372f;
+    color: #fffdf9;
+}
+
+.hampers-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hampers-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(40, 27, 22, 0.48),
+        rgba(40, 27, 22, 0.62)
+    );
+}
+
+.hampers-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.hampers-hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.25;
+    font-weight: normal;
+    margin: 15px 0;
+    color: #fffdf9;
+}
+
+.hampers-hero p {
+    color: #fffdf9;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.hampers-hero .subtitle {
+    color: #f0d7b5;
+}
+
+/* 7. HAMPERS INTRODUCTION */
+
+.hampers-intro {
+    max-width: 850px;
+    margin: 55px auto 35px;
+    padding: 20px 25px;
+    text-align: center;
+}
+
+.hampers-intro h2 {
+    color: #49372f;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.hampers-intro p {
+    color: #74665d;
+    line-height: 1.9;
+}
+
+/* 8. HAMPERS CATEGORY PHOTO AND TEXT SECTIONS */
+
+.hampers-categories {
+    max-width: 1150px;
+    margin: 35px auto 70px;
+    padding: 0 25px;
+}
+
+.hampers-category {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 35px 0;
+    padding: 25px;
+    background: #fffdf9;
+    border: 1px solid #e7ddd1;
+    box-shadow: 0 5px 20px rgba(73, 55, 47, 0.04);
+}
+
+.hampers-category:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.hampers-category img {
+    width: 48%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.hampers-category-content {
+    flex: 1;
+}
+
+.hampers-category h3 {
+    color: #49372f;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.hampers-category p {
+    color: #74665d;
+    line-height: 1.9;
+}
+
+/* 9. PRODUCT GALLERIES */
+
+.product-gallery {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.product-gallery h2 {
+    text-align: center;
+    color: #49372f;
+    margin: 35px 0 25px;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.collection-intro {
+    text-align: center;
+    color: #49372f;
+    margin: 10px auto 30px;
+    max-width: 750px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.gallery-card {
+    background: #fffdf9;
+    padding: 10px;
+    border: 1px solid #e7ddd1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(73, 55, 47, 0.10);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card h3 {
+    text-align: center;
+    color: #49372f;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 12px 0 5px;
+}
+
+/* 10. FOOTER */
+
 footer {
     text-align: center;
     padding: 30px 15px;
@@ -165,16 +376,60 @@ footer {
     color: #fffdf9;
 }
 
-/* MOBILE RESPONSIVENESS */
+footer p {
+    margin: 0;
+}
+
+/* 11. TABLET RESPONSIVENESS */
+
+@media (max-width: 900px) {
+    header {
+        padding: 22px 4%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .founder-section {
+        gap: 30px;
+    }
+
+    .hampers-category {
+        gap: 25px;
+    }
+
+    .hampers-category img {
+        height: 280px;
+    }
+}
+
+/* 12. MOBILE RESPONSIVENESS */
 
 @media (max-width: 700px) {
+
     header {
         flex-direction: column;
         text-align: center;
+        padding: 22px 15px;
+    }
+
+    .logo {
+        font-size: 17px;
     }
 
     nav {
         justify-content: center;
+        gap: 12px 17px;
+    }
+
+    nav a,
+    .language a {
+        font-size: 13px;
+    }
+
+    .about-hero {
+        padding: 65px 20px;
     }
 
     .about-hero h1 {
@@ -204,5 +459,92 @@ footer {
     .about-closing {
         margin: 40px auto;
         padding: 20px;
+    }
+
+    .hampers-hero {
+        min-height: 380px;
+        padding: 55px 20px;
+    }
+
+    .hampers-hero h1 {
+        font-size: 32px;
+    }
+
+    .hampers-intro {
+        margin: 35px auto 20px;
+        padding: 20px;
+    }
+
+    .hampers-intro h2 {
+        font-size: 25px;
+    }
+
+    .hampers-categories {
+        margin: 25px auto 45px;
+        padding: 0 15px;
+    }
+
+    .hampers-category,
+    .hampers-category:nth-child(even) {
+        flex-direction: column;
+        gap: 15px;
+        margin: 25px 0;
+        padding: 15px;
+    }
+
+    .hampers-category img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hampers-category h3 {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+
+    .hampers-category p {
+        font-size: 14px;
+    }
+
+    .product-gallery {
+        margin: 35px auto;
+        padding: 15px;
+    }
+
+    .product-gallery h2 {
+        font-size: 24px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-card {
+        padding: 7px;
+    }
+
+    .gallery-card img {
+        height: 170px;
+    }
+
+    .gallery-card h3 {
+        font-size: 13px;
+    }
+}
+
+/* 13. SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+    .hampers-hero h1 {
+        font-size: 27px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: 230px;
     }
 }
