@@ -221,6 +221,55 @@ footer {
 
   .welcome h2, .collections h2 { font-size: 28px; }
 }
+
+/* Photo backgrounds for the three homepage collection cards */
+.collection-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 340px;
+  padding: 38px 24px;
+  color: #fffdf9;
+  border: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.collection-card:nth-child(1) {
+  background-image: url("images/premium-hamper.jpg");
+}
+.collection-card:nth-child(2) {
+  background-image: url("images/Beauty1.jpg");
+}
+.collection-card:nth-child(3) {
+  background-image: url("images/Corporate1.jpg");
+}
+.collection-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(35,24,19,.48), rgba(35,24,19,.78));
+}
+.collection-card .eyebrow,
+.collection-card h3,
+.collection-card p,
+.collection-card a {
+  position: relative;
+  color: #fffdf9;
+}
+.collection-card .eyebrow { color: #f5d9ad; }
+.collection-card a {
+  display: inline-block;
+  align-self: center;
+  margin-top: 8px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 750px) {
+  .collection-card { min-height: 280px; }
+}
+
 </style>
 </head>
 
